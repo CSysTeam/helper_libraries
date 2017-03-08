@@ -28,8 +28,8 @@ char* itoa(int value, char* result, int base)
     // check that the base if valid
     if (base < 2 || base > 36) { *result = '\0'; return result; }
 
-    char* ptr = result, 
-    char* ptr1 = result, 
+    char* ptr = result;
+    char* ptr1 = result;
     char tmp_char;
     int tmp_value;
 
