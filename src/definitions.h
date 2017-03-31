@@ -18,6 +18,7 @@
 #define or ||
 
 typedef uint8_t TaskID;
+#define TASKLESS 0
 typedef unsigned char byte;
 #define BYTE_LENGTH 8
 
