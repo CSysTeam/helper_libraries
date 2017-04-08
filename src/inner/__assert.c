@@ -29,4 +29,9 @@ void __ASSERT_failed(char* filename, int line, char* expr)
 
         while(1){};
     }
+
+    else
+    {
+        while(1){};
+    }
 }
