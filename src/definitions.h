@@ -16,16 +16,22 @@
 #define is_not !=
 #define and &&
 #define or ||
+#define ADDR_OF(ptr) &(ptr)
+
+#define SWAP(x, y, T) do { T SWAP = x; x = y; y = SWAP; } while (0)
 
 typedef uint8_t TaskID;
+typedef TaskID InitiatedDriverID_t;
 #define TASKLESS 0
 typedef unsigned char byte;
 #define BYTE_LENGTH 8
 
-// pointer of function represent the deinitation function of the drivers
-typedef void (*__Driver_deinit_func)(int, TaskID);
-
 // maximum number of Tasks
 #define NUM_OF_TASKS 10
+
+// Modules numbers
+#define __PORTS_NUM 6
+#define __UART_MODULES_NUM 9
+#define __SPI_MODULES_NUM 5
 
 #endif // DEFINITIONS_H_
