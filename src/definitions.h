@@ -13,6 +13,8 @@
 #endif // __GNUC__
 
 #define is ==
+#define EQUAL ==
+#define NOT_EQUAL !=
 #define is_not !=
 #define and &&
 #define or ||
@@ -30,7 +32,7 @@ typedef unsigned char byte;
 #define NUM_OF_TASKS 10
 
 // Modules numbers
-#define __PORTS_NUM 6
+#define __GET_PORTS_NUM 6
 #define __UART_MODULES_NUM 9
 #define __SPI_MODULES_NUM 5
 
