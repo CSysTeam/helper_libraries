@@ -2,6 +2,7 @@
 #define DEFINITIONS_H_
 
 #include <stdint.h>
+#include "config.h"
 
 #ifdef __GNUC__
     #define ASM __asm__ __volatile__
@@ -28,11 +29,11 @@ typedef TaskID InitiatedDriverID_t;
 typedef unsigned char byte;
 #define BYTE_LENGTH 8
 
-// maximum number of Tasks
-#define NUM_OF_TASKS 10
+// TODO: must be removed from here
+#define SYS_CLK_SPEED 16E6
 
 // Modules numbers
-#define __GET_PORTS_NUM 6
+#define __PORTS_NUM 6
 #define __UART_MODULES_NUM 9
 #define __SPI_MODULES_NUM 5
 
