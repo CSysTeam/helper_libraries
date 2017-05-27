@@ -21,6 +21,11 @@
 #define or ||
 #define ADDR_OF(ptr) &(ptr)
 
+// Just empty macros to divide header files delcarations and functions prototypes
+// into two sections
+#define PUBLIC
+#define PRIVATE
+
 #define SWAP(x, y, T) do { T SWAP = x; x = y; y = SWAP; } while (0)
 
 typedef uint8_t TaskID;
@@ -29,12 +34,9 @@ typedef TaskID InitiatedDriverID_t;
 typedef unsigned char byte;
 #define BYTE_LENGTH 8
 
-// TODO: must be removed from here
-#define SYS_CLK_SPEED 16E6
+#define SYS_CLK_SPEED_IN_MHZ 16
+#define SYS_CLK_SPEED (SYS_CLK_SPEED_IN_MHZ * 1E6)
 
-// Modules numbers
-#define __PORTS_NUM 6
-#define __UART_MODULES_NUM 9
-#define __SPI_MODULES_NUM 5
+#define EQUAL_PRIRITY_TIME_SLICE 1000
 
 #endif // DEFINITIONS_H_
