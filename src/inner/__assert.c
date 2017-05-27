@@ -19,13 +19,13 @@ void __ASSERT_failed(char* filename, int line, char* expr)
         char line_str[4];
         itoa(line, line_str, 10);
 
-        __print( (unsigned char *)"ASSERTION FAILED [" );
-        __print( (unsigned char *)expr );
-        __print( (unsigned char *)"] @ " );
-        __print( (unsigned char *)filename );
-        __print( (unsigned char *)":" );
-        __print( (unsigned char *)line_str );
-        __print( (unsigned char *)"\n" );
+        __print( "ASSERTION FAILED [");
+        __print( expr );
+        __print( "] @ " );
+        __print( filename );
+        __print( ":" );
+        __print( line_str );
+        __print( "\n" );
 
         while(1){};
     }
