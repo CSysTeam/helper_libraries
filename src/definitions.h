@@ -10,15 +10,15 @@
     #define __NAKED_ISR __attribute__((naked, isr))
     #define NOP ASM("NOP")
 #else
-    #error "You should use `arm-none-eabi` toolchain"
+    #error "You must use `arm-none-eabi` toolchain"
 #endif // __GNUC__
 
-#define is ==
-#define EQUAL ==
-#define NOT_EQUAL !=
-#define is_not !=
-#define and &&
-#define or ||
+#define is          ==
+#define EQUAL       ==
+#define NOT_EQUAL   !=
+#define is_not      !=
+#define and         &&
+#define or          ||
 #define ADDR_OF(ptr) &(ptr)
 
 // Just empty macros to divide header files delcarations and functions prototypes
@@ -28,11 +28,10 @@
 
 #define SWAP(x, y, T) do { T SWAP = x; x = y; y = SWAP; } while (0)
 
-typedef uint8_t TaskID;
-typedef TaskID InitiatedDriverID_t;
 #define TASKLESS 0
 typedef unsigned char byte;
 #define BYTE_LENGTH 8
+typedef byte TaskID;
 
 #define SYS_CLK_SPEED_IN_MHZ 16
 #define SYS_CLK_SPEED (SYS_CLK_SPEED_IN_MHZ * 1E6)
