@@ -33,9 +33,6 @@ typedef unsigned char byte;
 #define BYTE_LENGTH 8
 typedef byte TaskID;
 
-#define SYS_CLK_SPEED_IN_MHZ 16
-#define SYS_CLK_SPEED (SYS_CLK_SPEED_IN_MHZ * 1E6)
-
 #define EQUAL_PRIRITY_TIME_SLICE 1000
 
 #endif // DEFINITIONS_H_
