@@ -33,6 +33,6 @@ typedef unsigned char byte;
 #define BYTE_LENGTH 8
 typedef byte TaskID;
 
-#define EQUAL_PRIRITY_TIME_SLICE 1000
+#define EQUAL_PRIRITY_TIME_SLICE 10
 
 #endif // DEFINITIONS_H_
